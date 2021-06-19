@@ -9,8 +9,8 @@ export class MyPerformanceComponent implements OnInit {
   constructor() {}
 
   lineChartData: any[] = [
-    { data: [85, 72, 78, 75, 77, 75], label: 'Expenses' },
-    { data: [85, 72, 78, 75, 77, 75], label: 'Net Worth' },
+    { data: [10, 72, 56, 42, 25, 75], label: 'Expenses' },
+    { data: [2, 23, 32, 16, 66, 50], label: 'Net Worth' },
   ];
 
   lineChartLabels: any[] = [
