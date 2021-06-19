@@ -1,1 +1,407 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+/*https://xd.adobe.com/view/9743f916-ba8e-4e17-87b5-e3975c8a545b-c210/*/
+:root {
+  --primary: #003b14d9;
+  --primary-text: #fff;
+  --secondary-text: #b2b2b2;
+  --border-radius: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Helvatica";
+  src: url("./assets/fonts/HelveticaNeue-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Helvatica-light";
+  src: url("./assets/fonts/helvetica_light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Helvatica-bold";
+  src: url("./assets/fonts/HelveticaNeue-Bold.ttf") format("truetype");
+}
+
+/*common css*/
+a {
+  color: #0044b1;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Helvatica, Sans-Serif;
+  color: var(--primary-text);
+  font-size: 1rem;
+  color: #000;
+}
+.btn-landing {
+  background: transparent;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.box-shadow {
+  box-shadow: 0px 0px 40px #0b0b0b24;
+}
+.btn-primary {
+  background: var(--primary);
+}
+.btn-outline {
+  border: 1px solid;
+}
+.btn-lg {
+  padding: 1rem 2rem;
+}
+.btn-dash {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  border-radius: 14px;
+  background: #f1f4f6;
+  border: 0;
+  color: #000;
+}
+.secondary-text {
+  color: var(--secondary-text);
+}
+.pagination {
+  .page-item {
+    .page-link {
+      padding: 0.175rem 0.55rem;
+      background-color: #e5e7ec;
+      color: #000;
+    }
+    &.active {
+      .page-link {
+        background-color: #e5e7ec;
+        color: #0044b1;
+        border-color: #e5e7ec;
+      }
+    }
+  }
+}
+.card {
+  border: 1px solid #d9d9d9;
+  border-radius: var(--border-radius);
+  .card-body {
+    padding: 15px;
+  }
+  .card-footer {
+    background: #fff;
+  }
+  .sub-heading {
+    padding: 10px 10px 0 10px;
+  }
+}
+
+.good {
+  color: #7fcc6d;
+}
+.page-heading {
+  position: relative;
+  color: #151515;
+  z-index: 1;
+  margin: 10px 0 0;
+  .title {
+    background-color: #fff;
+    position: relative;
+    display: inline;
+    z-index: 99;
+    padding: 0 10px 0 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #a5a5a5;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    z-index: 0;
+  }
+}
+
+.sub-heading {
+  font-size: 0.9rem;
+  font-family: Helvatica-bold;
+  padding: 10px 0;
+}
+
+// profile
+.dash-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .options {
+    padding: 0 0 0 10px;
+    font-size: 0.7rem;
+  }
+  .avatar {
+    display: flex;
+    align-items: center;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+/* Dashboard */
+.dashboard {
+  display: grid;
+  grid-template-columns: 18% 1fr;
+  background: url("./assets/img/dan-asaki-0uLVXFz6obg-unsplash@2x.png");
+  background-size: cover;
+  .filter {
+    display: flex;
+    font-size: 0.7rem;
+    .drop-down {
+      font-size: 0.7rem;
+    }
+  }
+  .side-nav {
+    background-image: radial-gradient(#003b14d9, #023614);
+    padding: 11%;
+    .logo {
+      margin: 0 0 130px 0;
+      display: flex;
+      justify-content: center;
+    }
+    ul {
+      li {
+        margin: 10px 0;
+        a {
+          color: var(--primary-text);
+          text-decoration: none;
+          padding: 9%;
+          display: block;
+          font-family: Helvatica-light;
+          position: relative;
+          i {
+            font-size: 1.3rem;
+            padding: 0 8px 0 0;
+          }
+          &:hover,
+          &.active {
+            background: #ffffff2e;
+            border-radius: 10px;
+            &::after {
+              font-family: Line Awesome Free;
+              content: "\f0da";
+              font-weight: normal;
+              font-style: normal;
+              margin: 0px 0px 0px 10px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main {
+    background: #fff;
+    padding: 30px;
+  }
+}
+
+.fudge-dashboard {
+  display: grid;
+  grid-template-columns: 45% 1fr 25%;
+  margin: 30px 0;
+  grid-gap: 20px;
+  .quick-stats {
+    grid-column: 1 / span 1;
+  }
+  .financial-health {
+    grid-column: 2 / span 2;
+  }
+  .my-performance {
+    grid-column: 1 / span 1;
+  }
+  .my-goals {
+    grid-column: 2 / span 2;
+  }
+  .industy-news {
+    grid-column: 1 / span 1;
+  }
+  .top-comments {
+    grid-column: 2 / span 1;
+  }
+  .users {
+    grid-column: 3 / span 1;
+  }
+}
+
+/*quicck-stat*/
+.quick-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 27% 27%;
+  grid-gap: 2%;
+  h6 {
+    color: #383838;
+  }
+  .card {
+    box-shadow: 0px 0px 40px #0b0b0b24;
+    border: 0;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    font-size: 0.7rem;
+    color: #505050;
+  }
+}
+
+// News & top comments
+.news-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .list {
+    margin: 0 0 15px 0;
+  }
+}
+.news-article,
+.top-comments {
+  .time-stamp {
+    font-size: 0.6rem;
+    color: #6f6f6f;
+  }
+  h6 {
+    color: #000000;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  p {
+    font-family: Helvatica-light;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  a {
+    color: #0044b1;
+    font-size: 0.8rem;
+  }
+}
+.top-comments {
+  .list {
+    display: flex;
+    .img-block {
+      margin: 0 10px 0 0;
+      img {
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+/*financial health*/
+.financial-health {
+  .card {
+    border: 0;
+  }
+  .card-body {
+    padding: 15px;
+    min-height: 60px;
+  }
+  .progress-bar {
+    width: 20px;
+    border-radius: 4px 4px 0 0;
+    position: absolute;
+    font-size: 0.7rem;
+    height: 25px;
+  }
+  .progress {
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: 0.75rem;
+    border-radius: 0;
+    height: 2px;
+    margin: 23px 0 0;
+    background-image: linear-gradient(to right, red, yellow, green);
+  }
+  .footer-text {
+    display: flex;
+    font-size: 0.7rem;
+  }
+}
+
+//User list
+
+.user-list {
+  display: flex;
+  margin: 0 0 20px 0;
+  h6 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .img-block {
+    img {
+      width: 45px;
+      height: 45px;
+      margin: 0 10px 0 0;
+      border-radius: 50%;
+    }
+  }
+  .status {
+    position: relative;
+    .online {
+      padding: 0 0 0 12px;
+      font-size: 0.8rem;
+      &::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        background: #7fcc6d;
+        position: absolute;
+        top: 5px;
+        border-radius: 5px;
+        left: 0;
+      }
+    }
+  }
+}
+
+/*my goal*/
+.my-goal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 20px;
+  .card {
+    border: 0;
+    text-align: center;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-size: 0.7rem;
+      color: #ccd;
+    }
+    h6 {
+      font-size: 0.7rem;
+    }
+  }
+}
+@import "media.scss";

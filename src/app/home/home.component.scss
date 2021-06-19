@@ -1,0 +1,76 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("/assets/img/dan-asaki-0uLVXFz6obg-unsplash@2x.png");
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  .logo-container {
+    background: var(--primary);
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(#003b14d9, #023614);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        font-size: 3rem;
+        padding: 20px 0;
+      }
+      p {
+        padding: 0 23% 2rem 23%;
+        text-align: center;
+      }
+    }
+
+    img {
+      width: 159px;
+      height: 52px;
+      z-index: 9999;
+      position: relative;
+      opacity: 1;
+    }
+  }
+  .icon {
+    cursor: pointer;
+    position: absolute;
+    bottom: 80px;
+    animation: bounce 2s ease-out infinite;
+  }
+  .intro {
+    animation: topToBottom ease 2s;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes topToBottom {
+  0% {
+    margin-top: 23%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}

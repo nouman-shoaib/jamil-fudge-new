@@ -1,0 +1,20 @@
+<div class="dashboard">
+  <div class="side-nav">
+    <div class="logo">
+      <img src="../../assets/img/logo.svg" alt="logo" />
+    </div>
+    <ul>
+      <li><a href="" [routerLink]="['./dashboard']" routerLinkActive="active"><i
+            class="las la-chart-pie"></i>Dashboard</a>
+      </li>
+      <li><a href="" [routerLink]="['./advisor']" routerLinkActive="active"><i class="las la-user-alt"></i>Advisors</a>
+      </li>
+      <li><a href=""><i class="las la-file-invoice"></i>My documents</a></li>
+      <li><a href=""><i class="las la-broadcast-tower"></i>News Feed</a></li>
+      <li><a href=""><i class="las la-phone"></i>Support</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+</div>
