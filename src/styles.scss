@@ -165,6 +165,7 @@ li {
   grid-template-columns: 18% 1fr;
   background: url("./assets/img/dan-asaki-0uLVXFz6obg-unsplash@2x.png");
   background-size: cover;
+  background-position: center;
   .filter {
     display: flex;
     font-size: 0.7rem;
@@ -214,6 +215,22 @@ li {
   .main {
     background: #fff;
     padding: 30px;
+    // animation: enlarge 2s ease;
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    width: 20px;
+    height: 11px;
+  }
+  50% {
+    width: 75%;
+    height: 50%;
+  }
+  100% {
+    width: 75%;
+    height: 100%;
   }
 }
 
