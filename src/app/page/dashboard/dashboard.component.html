@@ -138,9 +138,11 @@
           <p>{{content.body}}</p>
           <a href="">Read full article</a>
         </div>
-        <pagination class="pagination" [totalItems]="contentArray.length" [itemsPerPage]="4" previousText="&lsaquo;"
-          nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;" (pageChanged)="pageChanged($event)"></pagination>
       </div>
+    </div>
+    <div class="card-footer">
+      <pagination class="pagination" [totalItems]="contentArray.length" [itemsPerPage]="4" previousText="&lsaquo;"
+        nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;" (pageChanged)="pageChanged($event)"></pagination>
     </div>
   </div>
   <div class="top-comments card">
