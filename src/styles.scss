@@ -166,6 +166,8 @@ li {
   background: url("./assets/img/dan-asaki-0uLVXFz6obg-unsplash@2x.png");
   background-size: cover;
   background-position: center;
+  height: 100%;
+  min-height: 100vh;
   .filter {
     display: flex;
     font-size: 0.7rem;
