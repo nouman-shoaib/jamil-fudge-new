@@ -14,7 +14,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ChartsModule } from 'ng2-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyPerformanceComponent } from './page/dashboard/my-performance/my-performance.component';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +47,7 @@ import { MyPerformanceComponent } from './page/dashboard/my-performance/my-perfo
       clockwise: true,
     }),
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
